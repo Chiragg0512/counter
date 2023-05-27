@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        *{
+            margin: 0vw;
+            padding: 0em;
+            box-sizing: border-box;
+        }
+        .bg{
+            height: 100vh;
+            width: 100%;
+            overflow-y: hidden;
+    
+        }
+        .incre{
+            position: absolute;
+           margin-top: -30vw;
+           margin-left: 37vw;
+           font-size: xx-large ;
+           color: aliceblue;
+           font: bolder;
+                }
+                .dec{
+                    position: absolute;
+                    color: aliceblue;
+                    height: 3vw;
+                    width: 4vw;
+                    z-index: 1;
+                }
+                .inc{
+                    position: absolute;
+                    color: aliceblue;
+                    height: 3vw;
+                    width: 4vw;
+                    z-index: 1;
+                    margin-left: 14vh;
+                    margin-top: -5.7vh;
+    
+    
+                }
+                .whole{
+                height: 3vw;
+                    width: 6.6vw;
+                    position: absolute;
+                    background-color: aliceblue;
+                    margin-top: -45vh;
+                    margin-left: 96vh;
+                }
+                #counter{
+                    margin-top: 1vh;
+                    margin-left: 9vh;  
+                    font-size: 2vw;
+            
+                }
+    </style>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <div class="back"><img class="bg" src="pexels-magda-ehlers-960137.jpg"/></div>
+        <div class="incre">Incrementer and Decrementer</div>
+        <div class="whole">
+            <button onclick="decrement()" class="dec">
+            
+            </button>
+
+<div id="counter">0</div>
+<button onclick="increment()" class="inc">
+    
+    </button>
+        </div>
+    </div>
+    <script>
+        const countValue = document.getElementById('counter');
+    
+    function increment(){
+        // get the vlue from UI
+        let value = parseInt(countValue.innerText);
+        //Update the value
+        value = value + 1;
+        //set the value onto UI
+        countValue.innerText = value;
+    };
+    
+    
+    function decrement(){
+            // get the vlue from UI
+            let value = parseInt(countValue.innerText);
+            //Update the value
+            value = value - 1;
+            //set the value onto UI
+            countValue.innerText = value;
+    };
+    </script>
+</body>
+</html>
